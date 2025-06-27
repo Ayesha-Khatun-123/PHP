@@ -5,8 +5,8 @@
 </head>
 <body>
     <center>
-        <form action="Login_user.php" method="post">
-            <table border="1" cellpadding="5" cellspacing="0">
+        <form action="" method="post">
+            <table border="2" >
                 <tr>
                     <th>Username</th>
                     <td><input type="text" name="txtuser" required></td>
@@ -18,12 +18,29 @@
                 <tr>
                     <th>Action</th>
                     <td>
-                        <input type="submit" value="Submit">
+                        <input type="submit" value="Submit" name="submitbtn">
                         <input type="reset" value="Reset">
                     </td>
                 </tr>
             </table>
         </form>
+        <?php
+        if(isset($_POST['submitbtn'])){
+
+        
+        $user=$_POST['txtuser'];
+         $pass=$_POST['txtpass'];
+
+         if(strcmp($user,"ayesha")==0 and strcasecmp ($pass,"12345") == 0)
+         //  echo" <font color=green> You are a valid User </font>";
+        header("Location:first.php");
+
+         else
+          echo" <font color=red> You are a  not valid User </font>";
+        }
+
+        ?>
+        
     </center>
 </body>
 </html>
