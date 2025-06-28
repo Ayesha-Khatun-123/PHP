@@ -10,7 +10,7 @@
     <?php
      $mycon=mysqli_connect("localhost","root","Ayesha@2003","phpdatabase");
      //echo "Connection Succesful";
-      $sql= "select * from emp1";
+      $sql= "select * from emp1 where empid=501";
       $record= $mycon->query($sql);
 
       $n=  mysqli_num_rows($record);
