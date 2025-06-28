@@ -19,7 +19,7 @@
         if(isset($_POST['btnSubmit']))
        {
         $eid=$_POST['txtid'];
-        $ename=$_POST['txtname'];
+        $ename=$_POST['txtname']; 
         $esal=$_POST['txtsalary'];
 
         $mycon = mysqli_connect("localhost", "root", "Ayesha@2003", "phpdatabase");
