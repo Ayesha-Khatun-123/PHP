@@ -10,7 +10,7 @@
     <?php
      $mycon=mysqli_connect("localhost","root","Ayesha@2003","phpdatabase");
      //echo "Connection Succesful";
-      $sql= "select * from emp1 where empid=501";
+      $sql= "select * from emp1 ";
       $record= $mycon->query($sql);
 
       $n=  mysqli_num_rows($record);
@@ -39,7 +39,7 @@ echo "</table>";
       else{
          echo "Record not found";
       }
-
+ $mycon->close();
     ?>
 
 </center>
